@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.apptest.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_subscription"
+        android:name="com.apptest.ui.subscription.SubscriptionFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_subscrition" >
+        <action
+            android:id="@+id/action_nav_subscription_to_subscriptionFormFragment"
+            app:destination="@id/subscriptionFormFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/subscriptionFormFragment"
+        android:name="com.apptest.ui.subscription.SubscritpionFormFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_customer_form">
+        <argument
+            android:name="method"
+            app:argType="com.apptest.model.Methods" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_subscriptionFormFragment_to_ResponseFragment"
+            app:destination="@id/ResponseFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_qr_code"
+        android:name="com.apptest.ui.payments.qrcode.QRCodeFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_subscrition" >
+
+        <action
+            android:id="@+id/action_nav_qr_code_to_navQrCodeFormFragment"
+            app:destination="@id/navQrCodeFormFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navQrCodeFormFragment"
+        android:name="com.apptest.ui.payments.qrcode.QRCodeFormFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_customer_form">
+        <argument
+            android:name="method"
+            app:argType="com.apptest.model.Methods" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_navQrCodeFormFragment_to_ResponseFragment"
+            app:destination="@id/ResponseFragment" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/nav_boleto"
+        android:name="com.apptest.ui.payments.boleto.BoletoFragment"
+        android:label="@string/title_boleto"
+        tools:layout="@layout/fragment_boleto" >
+
+        <action
+            android:id="@+id/action_nav_boleto_to_navBoletoFormFragment"
+            app:destination="@id/navBoletoFormFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navBoletoFormFragment"
+        android:name="com.apptest.ui.payments.boleto.BoletoFormFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_boleto_form">
+        <argument
+            android:name="method"
+            app:argType="com.apptest.model.Methods" />
+        <argument
+            android:name="title"/>
+        <action
+            android:id="@+id/action_navBoletoFormFragment_to_ResponseFragment"
+            app:destination="@id/ResponseFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/nav_recurrence_customer"
+        android:name="com.apptest.ui.customer.CustomerFragment"
+        android:label="@string/title_recurrence_customer"
+        tools:layout="@layout/fragment_customer">
+        <action
+            android:id="@+id/action_nav_recurrence_customer_to_recurrenceCustomerFormFragment2"
+            app:destination="@id/recurrenceCustomerFormFragment2" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/recurrenceCustomerFormFragment2"
+        android:name="com.apptest.ui.customer.CustomerFormFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_customer_form">
+        <argument
+            android:name="method"
+            app:argType="com.apptest.model.Methods" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_recurrenceCustomerFormFragment2_to_ResponseFragment"
+            app:destination="@id/ResponseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ResponseFragment"
+        android:name="com.apptest.ui.ResponseFragment"
+        android:label="Resposta do Servidor"
+        tools:layout="@layout/fragment_response">
+        <argument
+            android:name="response"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_recurrence_plan"
+        android:name="com.apptest.ui.plan.PlanFragment"
+        android:label="@string/title_recurrence_plan"
+        tools:layout="@layout/fragment_plan" >
+        <action
+            android:id="@+id/action_nav_recurrence_plan_to_recurrencePlanFormFragment"
+            app:destination="@id/recurrencePlanFormFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recurrencePlanFormFragment"
+        android:name="com.apptest.ui.plan.PlanFormFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_plan_form">
+        <argument
+            android:name="method"
+            app:argType="com.apptest.model.Methods" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_recurrencePlanFormFragment_to_ResponseFragment"
+            app:destination="@id/ResponseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/authentication3dsFormFragment"
+        android:name="com.apptest.ui.authentication3ds.Authentication3dsFormFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_authentication3ds_form">
+        <argument
+            android:name="method"
+            app:argType="com.apptest.model.Methods" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_authentication3dsFormFragment_to_ResponseFragment"
+            app:destination="@id/ResponseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_3ds_auth"
+        android:name="com.apptest.ui.authentication3ds.Authentication3dsFragment"
+        android:label="@string/title_authentication_3ds"
+        tools:layout="@layout/fragment_authentication3ds">
+        <action
+            android:id="@+id/action_authentication3dsFragment_to_authentication3dsFormFragment"
+            app:destination="@id/authentication3dsFormFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/vaultFormFragment"
+        android:name="com.apptest.ui.vault.VaultFormFragment"
+        android:label="Parâmetros para o Cofre"
+        tools:layout="@layout/fragment_vault_form" />
+    <fragment
+        android:id="@+id/checkoutFormFragment"
+        android:name="com.apptest.ui.checkout.CheckoutFormFragment"
+        android:label="Parâmetros para o Checkout"
+        tools:layout="@layout/fragment_checkout_form" />
+    <fragment
+        android:id="@+id/nav_3ds_payment"
+        android:name="com.apptest.ui.payment3ds.Payment3dsFragment"
+        android:label="@string/title_payment_3ds">
+        <action
+            android:id="@+id/action_nav_3ds_payment_to_payment3dsFormFragment"
+            app:destination="@id/payment3dsFormFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/payment3dsFormFragment"
+        android:name="com.apptest.ui.payment3ds.Payment3dsFormFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_payment3ds_form">
+        <argument
+            android:name="method"
+            app:argType="com.apptest.model.Methods" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_payment3dsFormFragment_to_ResponseFragment"
+            app:destination="@id/ResponseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_options"
+        android:name="com.apptest.ui.OptionsFragment"
+        android:label="Variáveis de ambiente"
+        tools:layout="@layout/fragment_options" />
+    <fragment
+        android:id="@+id/nav_checkout"
+        android:name="com.apptest.ui.checkout.CheckoutFragment"
+        android:label="@string/menu_checkout">
+        <action
+            android:id="@+id/action_checkoutFragment_to_checkoutFormFragment"
+            app:destination="@id/checkoutFormFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_vault"
+        android:name="com.apptest.ui.vault.VaultFragment"
+        android:label="@string/menu_vault">
+        <action
+            android:id="@+id/action_nav_vault_to_vaultFormFragment"
+            app:destination="@id/vaultFormFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_cards"
+        android:name="com.apptest.ui.cards.CardsFragment"
+        android:label="@string/title_cards"
+        tools:layout="@layout/fragment_cards">
+        <action
+            android:id="@+id/action_cardsFragment_to_cardsFormFragment"
+            app:destination="@id/cardsFormFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cardsFormFragment"
+        android:name="com.apptest.ui.cards.CardsFormFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_cards_form">
+        <argument
+            android:name="method"
+            app:argType="com.apptest.model.Methods" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_cardsFormFragment_to_ResponseFragment"
+            app:destination="@id/ResponseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_payment_credit"
+        android:name="com.apptest.ui.payments.credit.CreditFragment"
+        android:label="@string/title_payment_credit"
+        tools:layout="@layout/fragment_credit">
+        <action
+            android:id="@+id/action_creditFragment_to_creditFormFragment"
+            app:destination="@id/creditFormFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/creditFormFragment"
+        android:name="com.apptest.ui.payments.credit.CreditFormFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_credit_form">
+        <argument
+            android:name="method"
+            app:argType="com.apptest.model.Methods" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_creditFormFragment_to_ResponseFragment"
+            app:destination="@id/ResponseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_token"
+        android:name="com.apptest.ui.token.TokenFragment"
+        android:label="@string/title_token"
+        tools:layout="@layout/fragment_token">
+        <action
+            android:id="@+id/action_tokenFragment_to_tokenFormFragment"
+            app:destination="@id/tokenFormFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tokenFormFragment"
+        android:name="com.apptest.ui.token.TokenFormFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_token_form">
+        <argument
+            android:name="method"
+            app:argType="com.apptest.model.Methods" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_tokenFormFragment_to_ResponseFragment"
+            app:destination="@id/ResponseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_payment_debit"
+        android:name="com.apptest.ui.payments.debit.DebitFragment"
+        android:label="@string/title_payment_debit"
+        tools:layout="@layout/fragment_debit">
+        <action
+            android:id="@+id/action_debitFragment_to_debitFormFragment"
+            app:destination="@id/debitFormFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/debitFormFragment"
+        android:name="com.apptest.ui.payments.debit.DebitFormFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_debit_form">
+        <argument
+            android:name="method"
+            app:argType="com.apptest.model.Methods" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_debitFormFragment_to_ResponseFragment"
+            app:destination="@id/ResponseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_pix"
+        android:name="com.apptest.ui.payments.pix.PixFragment"
+        android:label="@string/title_pix"
+        tools:layout="@layout/fragment_pix">
+        <action
+            android:id="@+id/action_pixFragment_to_pixFormFragment"
+            app:destination="@id/pixFormFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pixFormFragment"
+        android:name="com.apptest.ui.payments.pix.PixFormFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_pix_form">
+        <argument
+            android:name="method"
+            app:argType="com.apptest.model.Methods" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_pixFormFragment_to_ResponseFragment"
+            app:destination="@id/ResponseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_cancellation"
+        android:name="com.apptest.ui.cancellation.CancellationFragment"
+        android:label="@string/title_cancellation"
+        tools:layout="@layout/fragment_cancellation">
+        <action
+            android:id="@+id/action_cancellationFragment_to_cancellationFormFragment"
+            app:destination="@id/cancellationFormFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cancellationFormFragment"
+        android:name="com.apptest.ui.cancellation.CancellationFormFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_cancellation_form">
+        <argument
+            android:name="method"
+            app:argType="com.apptest.model.Methods" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_cancellationFormFragment_to_ResponseFragment"
+            app:destination="@id/ResponseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tdsFlowFormFragment"
+        android:name="com.apptest.ui.tds.TdsFlowFormFragment"
+        android:label="@string/menu_tds"
+        tools:layout="@layout/fragment_tds_flow" >
+        <action
+            android:id="@+id/action_tdsFlowFormFragment_to_ResponseFragment"
+            app:destination="@id/ResponseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_tds"
+        android:name="com.apptest.ui.tds.TdsFlowFragment"
+        android:label="@string/menu_tds">
+        <action
+            android:id="@+id/action_tdsFlowFragment_to_nav_tds"
+            app:destination="@id/tdsFlowFormFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="getnetWhite">#ffffff</color>
+
+    <color name="getnetColorPrimary">#DE3131</color>
+    <color name="getnetColorPrimaryDark">#B92828</color>
+    <color name="getnetColorAccent">#B493B4</color>
+
+    <color name="getnetButtonsColor">#DE3131</color>
+</resources>

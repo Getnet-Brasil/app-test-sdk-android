@@ -1,0 +1,1526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp">
+
+    <ScrollView
+        android:id="@+id/scrollViewAuthentication"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="32dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/containerButtons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvSellerIdAuth3ds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="2dp"
+                android:text="Seller Id"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/edtSellerIdAuth3ds"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:text="123456"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@id/tvSellerIdAuth3ds"/>
+
+            <LinearLayout
+                android:id="@+id/containerGetCardBrand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_marginTop="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edtSellerIdAuth3ds">
+
+                <TextView
+                    android:id="@+id/tvBin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Card Bin" />
+
+                <EditText
+                    android:id="@+id/edtCardBin3ds"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:text="515590" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/containerAccessToken"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_marginTop="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edtSellerIdAuth3ds">
+
+                <TextView
+                    android:id="@+id/tvClientCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Client Code" />
+
+                <EditText
+                    android:id="@+id/edtClientCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="string" />
+
+                <TextView
+                    android:id="@+id/tvCurrencyAuthentication"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Currency" />
+
+                <EditText
+                    android:id="@+id/edtCurrencyAuthentication"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="BRL" />
+
+                <TextView
+                    android:id="@+id/tvItems"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Items" />
+
+                <EditText
+                    android:id="@+id/edtItems"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:text="Descricao do item,Nome do item,XXX-00-XXX-00,1,100,100" />
+
+                <TextView
+                    android:id="@+id/tvJsVersion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Js Version" />
+
+                <EditText
+                    android:id="@+id/edtJsVersion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="1.0.0" />
+
+                <TextView
+                    android:id="@+id/tvOrderNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Order Number" />
+
+                <EditText
+                    android:id="@+id/edtOrderNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="1234-2019" />
+
+                <TextView
+                    android:id="@+id/tvOverridePaymentMethod"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Override Payment Method" />
+
+                <Spinner
+                    android:id="@+id/spOverridePaymentMethod"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="12dp"
+                    android:entries="@array/paymentMethod"/>
+
+                <TextView
+                    android:id="@+id/tvTotalAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Amount" />
+
+                <EditText
+                    android:id="@+id/edtTotalAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:text="100" />
+
+                <TextView
+                    android:id="@+id/tvAdditionalData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Additional Data" />
+
+                <EditText
+                    android:id="@+id/edtAdditionalData"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="string" />
+
+                <TextView
+                    android:id="@+id/tvAdditionalObject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Additional Object" />
+
+                <EditText
+                    android:id="@+id/edtAdditionalObject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="02" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/containerAuthentications"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_marginTop="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edtSellerIdAuth3ds">
+
+                <TextView
+                    android:id="@+id/tvCustomerCardAlias"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Customer Card Alias" />
+
+                <EditText
+                    android:id="@+id/edtCustomerCardAlias"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="João da Silva" />
+
+                <TextView
+                    android:id="@+id/tvOverridePaymentMethod2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Override Payment Method" />
+
+                <EditText
+                    android:id="@+id/edtOverridePaymentMethod2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="02" />
+
+                <TextView
+                    android:id="@+id/tvAlternateAuthenticationData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Alternate Authentication Data" />
+
+                <EditText
+                    android:id="@+id/edtAlternateAuthenticationData"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="string" />
+
+                <TextView
+                    android:id="@+id/tvAlternateAuthenticationMethod"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Alternate Authentication Method" />
+
+                <EditText
+                    android:id="@+id/edtAlternateAuthenticationMethod"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="02" />
+
+                <TextView
+                    android:id="@+id/tvToken"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Token" />
+
+                <EditText
+                    android:id="@+id/edtToken"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIzZjczZGQ3MS03NjkyLTQyYTItYjU2Ni1jYmUzMzJkYzU3OTQiLCJpYXQiOjE1NzY2NzI3NDUsImlzcyI6IjVkNzVhYzYxNmZlM2QxMmYxODhmZmQ3YyIsIk9yZ1VuaXRJZCI6IjVkNzRlZDczZTA5MTlmMTk1ODNjMzE5MyIsIlBheWxvYWQiOiJ7XCJvcmRlck51bWJlclwiOlwic3RyaW5nXCIsXCJwYXltZW50SWRcIjpcImRhMGU4ZDkwLTQ0OGMtNGJhMC1iZGUyLTQxN2Q2YTdmZjliOVwiLFwibWVyY2hhbnRJZFwiOlwiMDU0Mzk5MlwiLFwibWVyY2hhbnROYW1lXCI6XCJFQyBUZXN0ZSBIVUIg4oCTIFBBRFJBT1wiLFwiY3VycmVuY3lcIjpcImJybFwiLFwidG90YWxBbW91bnRcIjpcIjEwMDBcIixcImpzVmVyc2lvblwiOlwic3RyaW5nXCIsXCJjbGllbnRDb2RlXCI6XCJzdHJpbmctM2Y3M2RkNzEtNzY5Mi00MmEyLWI1NjYtY2JlMzMyZGM1Nzk0XCIsXCJvdmVycmlkZVBheW1lbnRNZXRob2RcIjpcIjAyXCIsXCJpdGVtc1wiOlt7XCJ0b3RhbEFtb3VudFwiOlwiOTAwXCIsXCJ1bml0UHJpY2VcIjpcIjg5OVwiLFwicXVhbnRpdHlcIjowLFwic2t1XCI6XCJzdHJpbmdcIixcImRlc2NyaXB0aW9uXCI6XCJzdHJpbmdcIixcIm5hbWVcIjpcInN0cmluZ1wifSx7XCJ0b3RhbEFtb3VudFwiOlwiOTAwXCIsXCJ1bml0UHJpY2VcIjpcIjgwMFwiLFwicXVhbnRpdHlcIjowLFwic2t1XCI6XCJzdHJpbmdcIixcImRlc2NyaXB0aW9uXCI6XCJzdHJpbmdcIixcIm5hbWVcIjpcInN0cmluZ1wifV19IiwiT2JqZWN0aWZ5UGF5bG9hZCI6ZmFsc2UsIlJlZmVyZW5jZUlkIjoiM2Y3M2RkNzEtNzY5Mi00MmEyLWI1NjYtY2JlMzMyZGM1Nzk0IiwiZXhwIjoxNTc2NjcyODY1fQ.jrPvIjtvSY6HukI-PjBE0ACWo68whA2FhCCfKeEfB4g" />
+
+                <TextView
+                    android:id="@+id/tvNpaCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Npa Code"/>
+
+                <EditText
+                    android:id="@+id/edtNpaCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="01" />
+
+                <TextView
+                    android:id="@+id/tvChallengeCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Challenge Code" />
+
+                <EditText
+                    android:id="@+id/edtChallengeCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="01" />
+
+                <TextView
+                    android:id="@+id/tvInstallmentTotalCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Installment Total Count" />
+
+                <EditText
+                    android:id="@+id/edtInstallmentTotalCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:text="03" />
+
+                <TextView
+                    android:id="@+id/tvMessageCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Message Category" />
+
+                <EditText
+                    android:id="@+id/edtMessageCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="01" />
+
+                <TextView
+                    android:id="@+id/tvTransactionMode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Transaction Mode" />
+
+                <EditText
+                    android:id="@+id/edtTransactionMode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="M" />
+
+                <TextView
+                    android:id="@+id/tvDeviceChannel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Device Channel" />
+
+                <EditText
+                    android:id="@+id/edtDeviceChannel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="Browser" />
+
+                <TextView
+                    android:id="@+id/tvAcsWindowSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Acs Window Size" />
+
+                <EditText
+                    android:id="@+id/edtAcsWindowSize"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="02"/>
+
+                <TextView
+                    android:id="@+id/tvHttpAcceptBrowserValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Http Accept Browser Value" />
+
+                <EditText
+                    android:id="@+id/edtHttpAcceptBrowserValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="text/html,application/xhtml+xml,application/xml"/>
+
+                <TextView
+                    android:id="@+id/tvHttpAcceptContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Http Accept Content" />
+
+                <EditText
+                    android:id="@+id/edtHttpAcceptContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="text/html" />
+
+                <TextView
+                    android:id="@+id/tvUserAgentBrowserValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Http Agent Browser Value" />
+
+                <EditText
+                    android:id="@+id/edtUserAgentBrowserValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0)" />
+
+                <TextView
+                    android:id="@+id/tvHttpBrowserColorDepth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Http Browser Color Depth"/>
+
+                <EditText
+                    android:id="@+id/edtHttpBrowserColorDepth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="24" />
+
+                <TextView
+                    android:id="@+id/tvHttpBrowserJavaEnabled"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Http Browser Java Enabled" />
+
+                <EditText
+                    android:id="@+id/edtHttpBrowserJavaEnabled"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="N" />
+
+                <TextView
+                    android:id="@+id/tvHttpBrowserJavaScriptEnabled"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Http Browser Java Script Enabled" />
+
+                <EditText
+                    android:id="@+id/edtHttpBrowserJavaScriptEnabled"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="Y" />
+
+                <TextView
+                    android:id="@+id/tvHttpBrowserLanguage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Http Browser Language" />
+
+                <EditText
+                    android:id="@+id/edtHttpBrowserLanguage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="pt-BR" />
+
+                <TextView
+                    android:id="@+id/tvHttpBrowserScreenHeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Http Browser Screen Height" />
+
+                <EditText
+                    android:id="@+id/edtHttpBrowserScreenHeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="260" />
+
+                <TextView
+                    android:id="@+id/tvHttpBrowserScreenWidth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Http Browser Screen Width" />
+
+                <EditText
+                    android:id="@+id/edtHttpBrowserScreenWidth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="1366" />
+
+                <TextView
+                    android:id="@+id/tvHttpBrowserTimeDifference"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Http Browser Time Difference" />
+
+                <EditText
+                    android:id="@+id/edtHttpBrowserTimeDifference"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="180" />
+
+                <TextView
+                    android:id="@+id/tvIpAddress2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ip Address" />
+
+                <EditText
+                    android:id="@+id/edtIpAddress2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="127.0.0.1" />
+
+                <TextView
+                    android:id="@+id/tvTransactionCountYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Transaction Count Year" />
+
+                <EditText
+                    android:id="@+id/edtTransactionCountYear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:text="12" />
+
+                <TextView
+                    android:id="@+id/tvTransactionCountDay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Transaction Count Day" />
+
+                <EditText
+                    android:id="@+id/edtTransactionCountDay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:text="1" />
+
+                <TextView
+                    android:id="@+id/tvAddCardAttempts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Card Attempts" />
+
+                <EditText
+                    android:id="@+id/edtAddCardAttempts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:text="1" />
+
+                <TextView
+                    android:id="@+id/tvCustomerId3ds"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Customer Id" />
+
+                <EditText
+                    android:id="@+id/edtCustomerId3ds"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="246ac61a-60da-40d5-9bad-2935f210385e" />
+
+                <TextView
+                    android:id="@+id/tvCustomerTypeId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Customer Type Id" />
+
+                <EditText
+                    android:id="@+id/edtCustomerTypeId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="CPF" />
+
+                <TextView
+                    android:id="@+id/tvPaymentAccountHistory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Payment Account History" />
+
+                <EditText
+                    android:id="@+id/edtPaymentAccountHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="PAYMENTACCOUNTEXISTS" />
+
+                <TextView
+                    android:id="@+id/tvPaymentAccountDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Payment Account Date" />
+
+                <EditText
+                    android:id="@+id/edtPaymentAccountDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="20191125" />
+
+                <TextView
+                    android:id="@+id/tvPriorSuspiciousActivity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Prior Suspicious Activity" />
+
+                <EditText
+                    android:id="@+id/edtPriorSuspiciousActivity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="false" />
+
+                <TextView
+                    android:id="@+id/tvModificationHistory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Modification History" />
+
+                <EditText
+                    android:id="@+id/edtModificationHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="ACCOUNTUPDATEDNOW" />
+
+                <TextView
+                    android:id="@+id/tvAccountPurchases"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Account Purchases" />
+
+                <EditText
+                    android:id="@+id/edtAccountPurchases"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:text="4" />
+
+                <TextView
+                    android:id="@+id/tvShippingAddressUsageDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Shipping Address Usage Date" />
+
+                <EditText
+                    android:id="@+id/edtShippingAddressUsageDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="23/11/2022" />
+
+                <TextView
+                    android:id="@+id/tvFirstUseOfShippingAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="First Use Of Shipping Address" />
+
+                <EditText
+                    android:id="@+id/edtFirstUseOfShippingAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="false" />
+
+                <TextView
+                    android:id="@+id/tvLastChangeDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Last Change Date" />
+
+                <EditText
+                    android:id="@+id/edtLastChangeDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="23/11/2022" />
+
+                <TextView
+                    android:id="@+id/tvCreatedDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Created Date" />
+
+                <EditText
+                    android:id="@+id/edtCreatedDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="23/11/2022" />
+
+                <TextView
+                    android:id="@+id/tvCreationHistory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Creation History" />
+
+                <EditText
+                    android:id="@+id/edtCreationHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="NEW_ACCOUNT" />
+
+                <TextView
+                    android:id="@+id/tvPasswordChangedDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Password Changed Date" />
+
+                <EditText
+                    android:id="@+id/edtPasswordChangedDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="2019-11-25" />
+
+                <TextView
+                    android:id="@+id/tvPasswordHistory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Password History" />
+
+                <EditText
+                    android:id="@+id/edtPasswordHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="PASSWORDCHANGEDNOW" />
+
+                <TextView
+                    android:id="@+id/tvEndDateAuthentication"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="End Date" />
+
+                <EditText
+                    android:id="@+id/edtEndDateAuthentication"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="2019-11-25" />
+
+                <TextView
+                    android:id="@+id/tvFrequency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Frequency" />
+
+                <EditText
+                    android:id="@+id/edtFrequency"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:text="4" />
+
+                <TextView
+                    android:id="@+id/tvOriginalPurchaseDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Original Purchase Date" />
+
+                <EditText
+                    android:id="@+id/edtOriginalPurchaseDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="2019-11-25" />
+
+                <TextView
+                    android:id="@+id/tvNumberToken"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Number Token" />
+
+                <EditText
+                    android:id="@+id/edtNumberToken"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="dfe05208b105578c070f806c80abd3af09e246827d29b866cf4ce16c205849977c9496cbf0d0234f42339937f327747075f68763537b90b31389e01231d4d13c" />
+
+                <TextView
+                    android:id="@+id/tvExpirationMonth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Expiration Month" />
+
+                <EditText
+                    android:id="@+id/edtExpirationMonth3ds"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="12" />
+
+                <TextView
+                    android:id="@+id/tvExpirationYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Expiration Year" />
+
+                <EditText
+                    android:id="@+id/edtExpirationYear3ds"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="2022" />
+
+                <TextView
+                    android:id="@+id/tvTypeCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Type Card" />
+
+                <EditText
+                    android:id="@+id/edtTypeCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="002"/>
+
+                <TextView
+                    android:id="@+id/tvDefaultCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Default Card" />
+
+                <EditText
+                    android:id="@+id/edtDefaultCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="false" />
+
+                <TextView
+                    android:id="@+id/tvProductCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Product Code" />
+
+                <EditText
+                    android:id="@+id/edtProductCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="01" />
+
+                <TextView
+                    android:id="@+id/tvCurrency2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Currency" />
+
+                <EditText
+                    android:id="@+id/edtCurrency2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="BRL" />
+
+                <TextView
+                    android:id="@+id/tvTotalAmount2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Amount" />
+
+                <EditText
+                    android:id="@+id/edtTotalAmount2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:text="1000" />
+
+                <TextView
+                    android:id="@+id/tvAddress1BillTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bill To Address1" />
+
+                <EditText
+                    android:id="@+id/edtAddress1BillTo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:text="Rua XXXX, XX" />
+
+                <TextView
+                    android:id="@+id/tvAddress2BillTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bill To Address2" />
+
+                <EditText
+                    android:id="@+id/edtAddress2BillTo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:text="Apartamento XX" />
+
+                <TextView
+                    android:id="@+id/tvAdministrativeAreaBillTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bill To Administrative Area" />
+
+                <EditText
+                    android:id="@+id/edtAdministrativeAreaBillTo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:text="RS" />
+
+                <TextView
+                    android:id="@+id/tvCountryBillTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bill To Country" />
+
+                <EditText
+                    android:id="@+id/edtCountryBillTo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:text="BR" />
+
+                <TextView
+                    android:id="@+id/tvEmailBillTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bill To Email" />
+
+                <EditText
+                    android:id="@+id/edtEmailBillTo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="customer@email.com" />
+
+                <TextView
+                    android:id="@+id/tvFirstNameBillTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bill To First Name" />
+
+                <EditText
+                    android:id="@+id/edtFirstNameBillTo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="João" />
+
+                <TextView
+                    android:id="@+id/tvLastNameBillTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bill To Last Name" />
+
+                <EditText
+                    android:id="@+id/edtLastNameBillTo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="da Silva" />
+
+                <TextView
+                    android:id="@+id/tvLocalityBillTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bill To Locality" />
+
+                <EditText
+                    android:id="@+id/edtLocalityBillTo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="Porto Alegre" />
+
+                <TextView
+                    android:id="@+id/tvMobilePhoneBillTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bill To Mobile Phone" />
+
+                <EditText
+                    android:id="@+id/edtMobilePhoneBillTo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="5551999887766" />
+
+                <TextView
+                    android:id="@+id/tvPhoneNumberBillTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bill To Phone Number" />
+
+                <EditText
+                    android:id="@+id/edtPhoneNumberBillTo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="555199988776" />
+
+                <TextView
+                    android:id="@+id/tvPostalCodeBillTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bill To Postal Code" />
+
+                <EditText
+                    android:id="@+id/edtPostalCodeBillTo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="90230060" />
+
+                <TextView
+                    android:id="@+id/tvItems2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Items" />
+
+                <EditText
+                    android:id="@+id/edtItems2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="02" />
+
+                <TextView
+                    android:id="@+id/tvAddress1ShipTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ship To Address1" />
+
+                <EditText
+                    android:id="@+id/edtAddress1ShipTo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:text="Rua XXXX, XX" />
+
+                <TextView
+                    android:id="@+id/tvAddress2ShipTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ship To Address2" />
+
+                <EditText
+                    android:id="@+id/edtAddress2ShipTo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:text="Apartamento XX" />
+
+                <TextView
+                    android:id="@+id/tvAdministrativeAreaShipTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ship To Administrative Area" />
+
+                <EditText
+                    android:id="@+id/edtAdministrativeAreaShipTo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:text="RS" />
+
+                <TextView
+                    android:id="@+id/tvCountryShipTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ship To Country" />
+
+                <EditText
+                    android:id="@+id/edtCountryShipTo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:text="BR" />
+
+                <TextView
+                    android:id="@+id/tvDestinationCodeShipTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ship To Destination Code" />
+
+                <EditText
+                    android:id="@+id/edtDestinationCodeShipTo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="01" />
+
+                <TextView
+                    android:id="@+id/tvFirstNameShipTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ship To First Name" />
+
+                <EditText
+                    android:id="@+id/edtFirstNameShipTo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="João" />
+
+                <TextView
+                    android:id="@+id/tvLastNameShipTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ship To Last Name" />
+
+                <EditText
+                    android:id="@+id/edtLastNameShipTo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="da Silva" />
+
+                <TextView
+                    android:id="@+id/tvLocalityShipTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ship To Locality" />
+
+                <EditText
+                    android:id="@+id/edtLocalityShipTo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="Porto Alegre" />
+
+                <TextView
+                    android:id="@+id/tvMethodShipTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ship To Method" />
+
+                <EditText
+                    android:id="@+id/edtMethodShipTo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="lowcost" />
+
+                <TextView
+                    android:id="@+id/tvPhoneNumberShipTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ship To Phone Number" />
+
+                <EditText
+                    android:id="@+id/edtPhoneNumberShipTo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="555199988776" />
+
+                <TextView
+                    android:id="@+id/tvPostalCodeShipTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ship To Postal Code" />
+
+                <EditText
+                    android:id="@+id/edtPostalCodeShipTo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="686593" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/containerAuthenticationsResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_marginTop="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edtSellerIdAuth3ds">
+
+                <TextView
+                    android:id="@+id/tvCurrency3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Currency" />
+
+                <EditText
+                    android:id="@+id/edtCurrency3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:text="BRL" />
+
+                <TextView
+                    android:id="@+id/tvOverridePaymentMethod3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Override Payment Method" />
+
+                <EditText
+                    android:id="@+id/edtOverridePaymentMethod3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="02" />
+
+                <TextView
+                    android:id="@+id/tvToken2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Token" />
+
+                <EditText
+                    android:id="@+id/edtToken2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="string" />
+
+                <TextView
+                    android:id="@+id/tvTokenChallenge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Token Challenge" />
+
+                <EditText
+                    android:id="@+id/edtTokenChallenge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="string" />
+
+                <TextView
+                    android:id="@+id/tvTotalAmount3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Amount" />
+
+                <EditText
+                    android:id="@+id/edtTotalAmount3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:text="1" />
+
+                <TextView
+                    android:id="@+id/tvNumberToken2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Number Token" />
+
+                <EditText
+                    android:id="@+id/edtNumberToken2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="dfe05208b105578c070f806c80abd3af09e246827d29b866cf4ce16c205849977c9496cbf0d0234f42339937f327747075f68763537b90b31389e01231d4d13c" />
+
+                <TextView
+                    android:id="@+id/tvExpirationMonth2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Expiration Month" />
+
+                <EditText
+                    android:id="@+id/edtExpirationMonth3ds2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="12" />
+
+                <TextView
+                    android:id="@+id/tvExpirationYear2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Expiration Year" />
+
+                <EditText
+                    android:id="@+id/edtExpirationYear3ds2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="2022" />
+
+                <TextView
+                    android:id="@+id/tvTypeCard2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Type Card" />
+
+                <EditText
+                    android:id="@+id/edtTypeCard2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="1" />
+
+                <TextView
+                    android:id="@+id/tvDefaultCard2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Default Card" />
+
+                <EditText
+                    android:id="@+id/edtDefaultCard2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="false" />
+
+                <TextView
+                    android:id="@+id/tvAdditionalData2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Additional Data" />
+
+                <EditText
+                    android:id="@+id/edtAdditionalData2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="string" />
+
+                <TextView
+                    android:id="@+id/tvAdditionalObject2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Additional Object" />
+
+                <EditText
+                    android:id="@+id/edtAdditionalObject2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="02" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/containerGetCardToken"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_marginTop="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edtSellerIdAuth3ds">
+
+                <TextView
+                    android:id="@+id/tvCardNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Card Number" />
+
+                <EditText
+                    android:id="@+id/edtCardNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:text="5155901222280001" />
+
+                <TextView
+                    android:id="@+id/tvCustomerId4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Customer Id" />
+
+                <EditText
+                    android:id="@+id/edtCustomerId4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="customer_21081826" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/containerButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <android.widget.Button
+            android:id="@+id/btRequest"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:background="@drawable/primary_action_button_background"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:textColor="@color/getnetWhite"
+            style="@style/Theme.Getnet.ActionButton"
+            android:text="Executar" />
+
+        <android.widget.Button
+            android:id="@+id/btClearRequestAuthentication"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:background="@drawable/secondary_action_button_background"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:textColor="@color/getnetButtonsColor"
+            style="@style/Theme.Getnet.ActionButton"
+            android:text="Limpar" />
+
+        <android.widget.Button
+            android:id="@+id/btReload"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:background="@drawable/secondary_action_button_background"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:textColor="@color/getnetButtonsColor"
+            style="@style/Theme.Getnet.ActionButton"
+            android:text="Restaurar" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

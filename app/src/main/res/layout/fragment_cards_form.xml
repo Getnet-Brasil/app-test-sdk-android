@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="32dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/containerButtons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvSellerIdCards"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="3dp"
+                android:text="Seller Id"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/edtSellerIdCustomer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:text="123456"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@id/tvSellerIdCards"/>
+
+            <LinearLayout
+                android:id="@+id/containerAddCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_marginTop="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edtSellerIdCustomer">
+
+                <TextView
+                    android:id="@+id/tvCardNumberToken"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Number token" />
+
+                <EditText
+                    android:id="@+id/edtCardNumberToken"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:text="dfe05208b105578c070f806c80abd3af09e246827d29b866cf4ce16c205849977c9496cbf0d0234f42339937f327747075f68763537b90b31389e01231d4d13c" />
+
+                <TextView
+                    android:id="@+id/tvCardBrand"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Brand" />
+
+                <EditText
+                    android:id="@+id/edtCardBrand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:text="Mastercard" />
+
+                <TextView
+                    android:id="@+id/tvCardCardholderName"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cardholder Name" />
+
+                <EditText
+                    android:id="@+id/edtCardCardholderName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:text="JOAO DA SILVA" />
+
+                <TextView
+                    android:id="@+id/tvCardExpirationMonth"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Expiration Month" />
+
+                <EditText
+                    android:id="@+id/edtCardExpirationMonth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:text="12" />
+
+                <TextView
+                    android:id="@+id/tvCardExpirationYear"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Expiration Year" />
+
+                <EditText
+                    android:id="@+id/edtCardExpirationYear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:text="23" />
+
+                <TextView
+                    android:id="@+id/tvCardCustomerId"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Customer Id" />
+
+                <EditText
+                    android:id="@+id/edtCardCustomerId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:text="customer_21081826" />
+
+                <TextView
+                    android:id="@+id/tvCardholderIdentification2"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cardholder Identification" />
+
+                <EditText
+                    android:id="@+id/edtCardholderIdentification2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:text="12345678912" />
+
+                <TextView
+                    android:id="@+id/tvVerifyCard"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Verify Card" />
+
+                <RadioGroup
+                    android:id="@+id/rgVerifyCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Verify Card">
+
+                    <RadioButton
+                        android:id="@+id/rbVerifyCardTrue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="True" />
+
+                    <RadioButton
+                        android:id="@+id/rbVerifyCardFalse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="False" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/tvCardSecurityCode"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Security Code" />
+
+                <EditText
+                    android:id="@+id/edtCardSecurityCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:text="123" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/containerListCards"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_marginTop="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edtSellerIdCustomer">
+                <TextView
+                    android:id="@+id/tvCardCustomerIdList"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Customer Id" />
+
+                <EditText
+                    android:id="@+id/edtCardCustomerIdList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:text="customer_21081826" />
+
+                <TextView
+                    android:id="@+id/tvCardStatus"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Status do Cartão" />
+
+                <Spinner
+                    android:id="@+id/spCardStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="12dp"
+                    android:entries="@array/cardsStatus"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/containerManageCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_marginTop="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edtSellerIdCustomer">
+                <TextView
+                    android:id="@+id/tvCardId"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Card Id" />
+
+                <EditText
+                    android:id="@+id/edtCardId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:text="14a2ce5d-ebc3-49dc-a516-cb5239b02285" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/containerButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <android.widget.Button
+            android:id="@+id/btRequest"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:background="@drawable/primary_action_button_background"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:textColor="@color/getnetWhite"
+            style="@style/Theme.Getnet.ActionButton"
+            android:text="Executar" />
+
+        <android.widget.Button
+            android:id="@+id/btClearRequest"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:background="@drawable/secondary_action_button_background"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:textColor="@color/getnetButtonsColor"
+            style="@style/Theme.Getnet.ActionButton"
+            android:text="Limpar" />
+
+        <android.widget.Button
+            android:id="@+id/btReload"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:background="@drawable/secondary_action_button_background"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:textColor="@color/getnetButtonsColor"
+            style="@style/Theme.Getnet.ActionButton"
+            android:text="Restaurar" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

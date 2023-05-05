@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group
+        android:id="@+id/menu_items"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_checkout"
+            android:title="@string/menu_checkout" />
+        <item
+            android:id="@+id/nav_vault"
+            android:title="@string/menu_vault" />
+        <item
+            android:id="@+id/nav_token"
+            android:title="@string/menu_token" />
+        <item
+            android:id="@+id/nav_cards"
+            android:title="@string/menu_cards" />
+        <item
+            android:id="@+id/nav_payment_credit"
+            android:title="@string/menu_payment_credit" />
+        <item
+            android:id="@+id/nav_payment_debit"
+            android:title="@string/menu_payment_debit" />
+        <item
+            android:id="@+id/nav_boleto"
+            android:title="@string/menu_boleto"/>
+        <item
+            android:id="@+id/nav_qr_code"
+            android:title="@string/menu_qr_code"/>
+        <item
+            android:id="@+id/nav_pix"
+            android:title="@string/menu_pix"/>
+        <item
+            android:id="@+id/nav_cancellation"
+            android:title="@string/menu_cancellation"/>
+        <item
+            android:id="@+id/nav_recurrence_customer"
+            android:title="@string/menu_clients"/>
+        <item
+            android:id="@+id/nav_recurrence_plan"
+            android:title="@string/menu_plans"/>
+        <item
+            android:id="@+id/nav_subscription"
+            android:title="@string/menu_subs"/>
+        <item
+            android:id="@+id/nav_3ds_auth"
+            android:title="@string/menu_3ds_auth"/>
+        <item
+            android:id="@+id/nav_3ds_payment"
+            android:title="@string/menu_3ds_payment"/>
+        <item
+            android:id="@+id/nav_tds"
+            android:title="@string/menu_tds"/>
+    </group>
+    <group
+        android:id="@+id/menu_options"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_options"
+            android:title="@string/menu_options"/>
+    </group>
+</menu>

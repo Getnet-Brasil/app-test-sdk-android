@@ -1,0 +1,186 @@
+<resources>
+    <string name="app_name">AppTest</string>
+
+    <!-- Label buttons menu options -->
+    <string name="add_card">Add card</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="menu_home">Início</string>
+    <string name="menu_checkout">Checkout</string>
+    <string name="menu_vault">Cofre</string>
+    <string name="menu_tds">(API) Fluxo completo 3ds</string>
+    <string name="menu_payment_credit">(API) Pagamento Crédito</string>
+    <string name="menu_payment_debit">(API) Pagamento Débito</string>
+    <string name="menu_boleto">(API) Boleto</string>
+    <string name="menu_qr_code">(API) QR Code</string>
+    <string name="menu_pix">(API) Pix</string>
+    <string name="menu_cancellation">(API) Cancelamento</string>
+    <string name="menu_token">(API) Tokenização</string>
+    <string name="menu_cards">(API) Cofre</string>
+    <string name="menu_clients">(API) Clientes</string>
+    <string name="menu_plans">(API) Planos</string>
+    <string name="menu_subs">(API) Assinaturas</string>
+    <string name="menu_3ds_auth">(API) Autenticação 3ds 2.1</string>
+    <string name="menu_3ds_payment">(API) Pagamento Autenticado 3ds 2.1</string>
+    <string name="menu_options">Variáveis de ambiente</string>
+
+    <string name="menu_slideshow">Métodos Assinaturas</string>
+    <string name="title_boleto">Métodos Boletos</string>
+    <string name="title_token">Métodos Tokenização</string>
+    <string name="title_recurrence_customer">Métodos Clientes</string>
+    <string name="title_recurrence_plan">Métodos Planos</string>
+    <string name="title_authentication_3ds">Métodos Autenticação 3ds</string>
+    <string name="title_payment_3ds">Métodos Pagamento 3ds</string>
+    <string name="title_cards">Métodos Cofre</string>
+    <string name="title_payment_credit">Métodos Pagamento Crédito</string>
+    <string name="title_payment_debit">Métodos Pagamento Débito</string>
+    <string name="title_pix">Métodos Pix</string>
+    <string name="title_cancellation">Métodos Cancelamento</string>
+
+    <string name="key_new_customer">newCustomer</string>
+    <string name="key_list_customers">listCustomers</string>
+    <string name="key_get_customer">getCustomer</string>
+    <string name="key_update_customer">updateCustomer</string>
+    <string name="key_update_customer_status">updateCustomerStatus</string>
+
+    <string name="key_new_plan">newPlan</string>
+    <string name="key_list_plans">listPlans</string>
+    <string name="key_get_plan">getPlan</string>
+    <string name="key_update_plan">updatePlan</string>
+    <string name="key_update_plan_status">updatePlanStatus</string>
+    <string name="key_migrate_plan">migratePlan</string>
+
+    <string name="key_new_subscription">newSubscritpion</string>
+    <string name="key_list_subscriptions">listSubscription</string>
+    <string name="key_get_subscription">getSubscription</string>
+    <string name="key_cancel_subscription">cancelSubscription</string>
+    <string name="key_cancel_subscription_by_seller_id">cancelSubscriptionBySellerId</string>
+    <string name="key_billing_projection">billingProjection</string>
+    <string name="key_confirm_payment">confirmPayment</string>
+    <string name="key_update_date_charge">updateDateCharge</string>
+    <string name="key_update_data_payment">updateDataPayment</string>
+    <string name="key_register_change_date_value">registerChangeDateOrValue</string>
+    <string name="key_list_changes">listChanges</string>
+    <string name="key_remove_changes">removeChanges</string>
+    <string name="key_add_new_change">addNewChangesDateOrValue</string>
+    <string name="title_response_activity">Response:</string>
+    <string name="key_delete_change">deleteChangeDataOrValue</string>
+    <string name="key_update_date_or_value">updateDateOrValue</string>
+    <string name="key_alter_plan_subscription">alterPlanSubscription</string>
+    <string name="key_list_charges">listCharges</string>
+    <string name="appbar_scrolling_view_behavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="key_simulate_plan">simulatePlan</string>
+    <string name="key_list_plan_by_filter">listPlanByFilter</string>
+    <string name="key_alter_plan">alterPlan</string>
+    <string name="key_get_subscription_by_plan">getSubscriptionByPlan</string>
+    <string name="key_alter_subscription">updateSubscription</string>
+
+    <string name="key_card_brand">getCardBrand</string>
+    <string name="key_get_card_number_token">getCardNumberToken</string>
+
+    <string name="key_generate_token">generateToken</string>
+    <string name="key_get_authentications">getAuthentications</string>
+    <string name="key_get_authentications_result">getAuthenticationsResult</string>
+
+    <string name="key_payment_authenticated">paymentAuthenticated</string>
+    <string name="key_payment_confirm">paymentConfirm</string>
+    <string name="key_payment_adjustment">paymentAdjustment</string>
+    <string name="key_payment_cancel">paymentCancel</string>
+
+    <string name="key_vault_add_card">vaultAddCard</string>
+    <string name="key_vault_list_cards">vaultListCards</string>
+    <string name="key_vault_get_card">vaultGetCard</string>
+    <string name="key_vault_remove_card">vaultRemoveCard</string>
+
+    <string name="key_payment_credit">paymentCredit</string>
+    <string name="key_payment_credit_confirmation">paymentCreditConfirmation</string>
+    <string name="key_payment_credit_adjust">paymentCreditAdjust</string>
+    <string name="key_payment_credit_cancel">paymentCreditCancel</string>
+    <string name="key_payment_credit_verify_card">paymentCreditVerifyCard</string>
+
+    <string name="key_payment_debit">paymentDebit</string>
+    <string name="key_payment_debit_cancel">paymentDebitCancel</string>
+
+    <string name="key_generate_qrcode">generateQrCode</string>
+    <string name="key_check_payment_status">checkPaymentStatus</string>
+
+    <string name="key_generate_pix">generatePixQrCode</string>
+    <string name="key_check_payment_pix_status">checkPaymentPixStatus</string>
+
+    <string name="key_create_boleto_v1">createBoletoV1</string>
+    <string name="key_download_boleto_pdf_v1">downloadBoletoPdfV1</string>
+    <string name="key_download_boleto_html_v1">downloadBoletoHtmlV1</string>
+
+    <string name="key_cancellation_request">cancellationRequest</string>
+    <string name="key_get_cancellation_by_customer">cancellationGetByCustomer</string>
+    <string name="key_get_cancellation_by_id">cancellationGetById</string>
+
+    <string name="error_missing_seller_id">Você precisa adicionar valores para o client_id, client_secret e o seller_id antes de prosseguir. Faça isso na opção Variáveis de Ambiente do menu lateral</string>
+    <string name="seller_id_label">Seller Id</string>
+    <string-array name="statusCustomer">
+        <item>active</item>
+        <item>inactive</item>
+    </string-array>
+
+    <string-array name="documentType">
+        <item>CPF</item>
+        <item>CNPJ</item>
+    </string-array>
+
+    <string-array name="paymentType">
+        <item>FULL</item>
+        <item>INSTALL_NO_INTEREST</item>
+        <item>INSTALL_WITH_INTEREST</item>
+    </string-array>
+
+    <string-array name="sortType">
+        <item>ASC</item>
+        <item>DESC</item>
+    </string-array>
+
+    <string-array name="productTypes">
+        <item>cash_carry</item>
+        <item>digital_content</item>
+        <item>digital_goods</item>
+        <item>gift_card</item>
+        <item>physical_goods</item>
+        <item>renew_subs</item>
+        <item>shareware</item>
+        <item>service</item>
+    </string-array>
+
+    <string-array name="periodType">
+        <item>MONTHLY</item>
+        <item>BIMONTHLY</item>
+        <item>YEARLY</item>
+        <item>QUARTERLY</item>
+        <item>SEMESTERLY</item>
+        <item>SPECIFIC</item>
+    </string-array>
+
+    <string-array name="paymentMethod">
+        <item>02</item>
+        <item>03</item>
+    </string-array>
+
+    <string-array name="paymentMethod3ds">
+        <item>CREDIT_PRE_AUTHORIZATION</item>
+        <item>CREDIT_AUTHORIZATION</item>
+    </string-array>
+
+    <string-array name="cardsStatus">
+        <item>ALL</item>
+        <item>ACTIVE</item>
+        <item>RENEWED</item>
+    </string-array>
+
+    <string-array name="paymentMethodCancel">
+        <item>CREDIT</item>
+        <item>DEBIT</item>
+    </string-array>
+
+    <string-array name="environment">
+        <item>HOMOLOG</item>
+        <item>PROD</item>
+    </string-array>
+</resources>

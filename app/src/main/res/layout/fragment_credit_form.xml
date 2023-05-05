@@ -1,0 +1,816 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout8"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    tools:context=".ui.payments.credit.CreditFormFragment">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="32dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/containerButtons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvSellerIdPaymentCredit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="3dp"
+                android:text="Seller Id"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/edtSellerIdPaymentCredit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="123456"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSellerIdPaymentCredit" />
+
+
+            <LinearLayout
+                android:id="@+id/containerPayment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:orientation="vertical"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edtSellerIdPaymentCredit">
+
+                <TextView
+                    android:id="@+id/tvAmountPaymentCredit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Amount" />
+
+                <EditText
+                    android:id="@+id/edtAmountPaymentCredit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:text="100" />
+
+                <TextView
+                    android:id="@+id/tvCurrencyPaymentCredit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Currency" />
+
+                <EditText
+                    android:id="@+id/edtCurrencyPaymentCredit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:text="BRL" />
+
+                <TextView
+                    android:id="@+id/tvOrderIdPaymentCredit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Order Id" />
+
+                <EditText
+                    android:id="@+id/edtOrderIdPaymentCredit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:text="6d2e4380-d8a3-4ccb-9138-c289182818a3" />
+
+                <TextView
+                    android:id="@+id/tvSalesTaxPaymentCredit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Sales Tax" />
+
+                <EditText
+                    android:id="@+id/edtSalesTaxPaymentCredit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:text="0" />
+
+                <TextView
+                    android:id="@+id/tvProductTypePaymentCredit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Product Type" />
+
+                <Spinner
+                    android:id="@+id/spProductTypePaymentCredit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:entries="@array/productTypes"/>
+
+                <TextView
+                    android:id="@+id/tvCustomerIdPaymentCredit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Customer Id" />
+
+
+                <EditText
+                    android:id="@+id/edtCustomerIdPaymentCredit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="customer_21081826" />
+
+                <TextView
+                    android:id="@+id/tvFirstNamePaymentCredit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="First Name" />
+
+                <EditText
+                    android:id="@+id/edtFirstNamePaymentCredit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="João" />
+
+                <TextView
+                    android:id="@+id/tvLastNamePaymentCredit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Last Name" />
+
+                <EditText
+                    android:id="@+id/edtLastNamePaymentCredit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="da Silva" />
+
+                <TextView
+                    android:id="@+id/tvNamePaymentCredit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="First Name" />
+
+                <EditText
+                    android:id="@+id/edtNamePaymentCredit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="João" />
+
+                <TextView
+                    android:id="@+id/tvDocumentTypePaymentCredit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Document Type" />
+
+                <Spinner
+                    android:id="@+id/spDocumentTypePaymentCredit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:entries="@array/documentType" />
+
+                <TextView
+                    android:id="@+id/tvDocumentNumberPaymentCredit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Document Number" />
+
+                <EditText
+                    android:id="@+id/edtDocumentNumberPaymentCredit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="82916868070" />
+
+                <TextView
+                    android:id="@+id/tvPhoneNumberPaymentCredit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Phone Number" />
+
+                <EditText
+                    android:id="@+id/edtPhoneNumberPaymentCredit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="5551999887766" />
+
+                <TextView
+                    android:id="@+id/tvEmailPaymentCredit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Email" />
+
+                <EditText
+                    android:id="@+id/edtEmailPaymentCredit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="aceitei@getnet.com.br" />
+
+                <TextView
+                    android:id="@+id/tvStreetBillingAddressPaymentCredit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Street" />
+
+                <EditText
+                    android:id="@+id/edtStreetBillingAddressPaymentCredit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Av. Brasil" />
+
+                <TextView
+                    android:id="@+id/tvNumberBillingAddressPaymentCredit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Number" />
+
+                <EditText
+                    android:id="@+id/edtNumberBillingAddressPaymentCredit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:text="1000" />
+
+                <TextView
+                    android:id="@+id/tvComplementBillingAddressPaymentCredit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Complement" />
+
+                <EditText
+                    android:id="@+id/edtComplementBillingAddressPaymentCredit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Sala 1" />
+
+                <TextView
+                    android:id="@+id/tvDistrictBillingAddressPaymentCredit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="District" />
+
+                <EditText
+                    android:id="@+id/edtDistrictBillingAddressPaymentCredit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="São Geraldo" />
+
+                <TextView
+                    android:id="@+id/tvCityBillingAddressPaymentCredit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="City" />
+
+                <EditText
+                    android:id="@+id/edtCityBillingAddressPaymentCredit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Porto Alegre" />
+
+                <TextView
+                    android:id="@+id/tvStateBillingAddressPaymentCredit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="State" />
+
+                <EditText
+                    android:id="@+id/edtStateBillingAddressPaymentCredit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="RS" />
+
+                <TextView
+                    android:id="@+id/tvCountryBillingAddressPaymentCredit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Country" />
+
+                <EditText
+                    android:id="@+id/edtCountryBillingAddressPaymentCredit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Brasil" />
+
+                <TextView
+                    android:id="@+id/tvPostalCodeBillingAddressPaymentCredit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Postal Code   " />
+
+                <EditText
+                    android:id="@+id/edtPostalCodeBillingAddressPaymentCredit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:text="90230060" />
+
+                <TextView
+                    android:id="@+id/tvShippingsPaymentCredit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Shippings" />
+
+                <EditText
+                    android:id="@+id/edtShippingsPaymentCredit"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:text="Lucas,Lucas Grando,aceitei@getnet.com.br,51999999999,3000,Av. Brasil,1000,São Geraldo, Porto Alegre, RS, Brasil, 90230060, 12345678" />
+
+                <TextView
+                    android:id="@+id/tvIdentificationCodePaymentCredit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Sub Merchant Identification Code" />
+
+                <EditText
+                    android:id="@+id/edtIdentificationCodePaymentCredit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:text="9058344" />
+
+                <TextView
+                    android:id="@+id/tvDocumentTypeSubMerchantPaymentCredit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Sub Merchant Document Type" />
+
+                <EditText
+                    android:id="@+id/edtDocumentTypeSubMerchantPaymentCredit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:text="CNPJ" />
+
+                <TextView
+                    android:id="@+id/tvDocumentNumberSubMerchantPaymentCredit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Sub Merchant Document Number" />
+
+                <EditText
+                    android:id="@+id/edtDocumentNumberSubMerchantPaymentCredit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:text="20551625000159" />
+
+                <TextView
+                    android:id="@+id/tvAddressSubMerchantPaymentCredit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Sub Merchant Address" />
+
+                <EditText
+                    android:id="@+id/edtAddressSubMerchantPaymentCredit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:text="Torre Negra 44" />
+
+                <TextView
+                    android:id="@+id/tvCitySubMerchantPaymentCredit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Sub Merchant City" />
+
+                <EditText
+                    android:id="@+id/edtCitySubMerchantPaymentCredit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:text="Cidade" />
+
+                <TextView
+                    android:id="@+id/tvStateSubMerchantPaymentCredit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Sub Merchant State" />
+
+                <EditText
+                    android:id="@+id/edtStateSubMerchantPaymentCredit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:text="RS" />
+
+                <TextView
+                    android:id="@+id/tvPostalCodeSubMerchantPaymentCredit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Sub Merchant Postal Code" />
+
+                <EditText
+                    android:id="@+id/edtPostalCodeSubMerchantPaymentCredit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:text="90520000" />
+
+
+                <TextView
+                    android:id="@+id/tvDelayedPaymentCredit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Delayed" />
+
+                <EditText
+                    android:id="@+id/edtDelayedPaymentCredit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:text="false" />
+
+                <TextView
+                    android:id="@+id/tvPreAuthPaymentCredit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Pre Authorization" />
+
+                <EditText
+                    android:id="@+id/edtPreAuthPaymentCredit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:text="false" />
+
+
+                <TextView
+                    android:id="@+id/tvSaveCardDataPaymentCredit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Save Card Data" />
+
+                <EditText
+                    android:id="@+id/edtSaveCardDataPaymentCredit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:text="false" />
+
+
+                <TextView
+                    android:id="@+id/tvTransactionTypePaymentCredit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Transaction Type" />
+
+                <EditText
+                    android:id="@+id/edtTransactionTypePaymentCredit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:text="FULL" />
+
+                <TextView
+                    android:id="@+id/tvNumberInstallmentsPaymentCredit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Number Installments" />
+
+                <EditText
+                    android:id="@+id/edtNumberInstallmentsPaymentCredit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:text="1" />
+
+                <TextView
+                    android:id="@+id/tvSoftDescriptorPaymentCredit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Soft Descriptor" />
+
+                <EditText
+                    android:id="@+id/edtSoftDescriptorPaymentCredit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:text="LOJA*TESTE*COMPRA-123" />
+
+
+                <TextView
+                    android:id="@+id/tvDynamicMccPaymentCredit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Dynamic Mcc" />
+
+                <EditText
+                    android:id="@+id/edtDynamicMccPaymentCredit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:text="1799" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/containerVerifyCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:orientation="vertical"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/containerPayment">
+
+                <TextView
+                    android:id="@+id/tvCardNumberToken"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Number token" />
+
+                <EditText
+                    android:id="@+id/edtCardNumberToken"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:text="dfe05208b105578c070f806c80abd3af09e246827d29b866cf4ce16c205849977c9496cbf0d0234f42339937f327747075f68763537b90b31389e01231d4d13c" />
+
+                <TextView
+                    android:id="@+id/tvCardBrand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Brand" />
+
+                <EditText
+                    android:id="@+id/edtCardBrand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:text="Mastercard" />
+
+                <TextView
+                    android:id="@+id/tvCardCardholderName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Cardholder Name" />
+
+                <EditText
+                    android:id="@+id/edtCardCardholderName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:text="JOAO DA SILVA" />
+
+                <TextView
+                    android:id="@+id/tvCardExpirationMonth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Expiration Month" />
+
+                <EditText
+                    android:id="@+id/edtCardExpirationMonth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:text="12" />
+
+                <TextView
+                    android:id="@+id/tvCardExpirationYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Expiration Year" />
+
+                <EditText
+                    android:id="@+id/edtCardExpirationYear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:text="23" />
+
+                <TextView
+                    android:id="@+id/tvSecurityCodeCredit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Security Code" />
+
+                <EditText
+                    android:id="@+id/edtSecurityCodeCredit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:text="123" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/containerManagerPayment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:orientation="vertical"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edtSellerIdPaymentCredit">
+
+                <TextView
+                    android:id="@+id/tvPaymentIdCredit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Payment Id" />
+
+                <EditText
+                    android:id="@+id/edtPaymentIdCredit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:text="b71af724-7c98-44a0-829e-7d5f4e4e9cbf" />
+
+                <TextView
+                    android:id="@+id/tvAmountCreditManage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Amount" />
+
+                <EditText
+                    android:id="@+id/edtAmountCreditManage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:text="19990" />
+
+                <LinearLayout
+                    android:id="@+id/containerAdjust"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+                    <TextView
+                        android:id="@+id/tvCurrencyPaymentCreditManage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Currency" />
+
+                    <EditText
+                        android:id="@+id/edtCurrencyPaymentCreditManage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:text="BRL" />
+                    <TextView
+                        android:id="@+id/tvSoftDescriptorPaymentCreditManage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Soft Descriptor" />
+
+                    <EditText
+                        android:id="@+id/edtSoftDescriptorPaymentCreditManage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        
+                        android:text="LOJA*TESTE*COMPRA-123" />
+
+                    <TextView
+                        android:id="@+id/tvDynamicMccPaymentCreditManage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Dynamic Mcc" />
+
+                    <EditText
+                        android:id="@+id/edtDynamicMccPaymentCreditManage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        
+                        android:text="1799" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/containerButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <android.widget.Button
+            android:id="@+id/btRequest"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:background="@drawable/primary_action_button_background"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:textColor="@color/getnetWhite"
+            style="@style/Theme.Getnet.ActionButton"
+            android:text="Executar" />
+
+        <android.widget.Button
+            android:id="@+id/btClearRequest"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:background="@drawable/secondary_action_button_background"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:textColor="@color/getnetButtonsColor"
+            style="@style/Theme.Getnet.ActionButton"
+            android:text="Limpar" />
+
+        <android.widget.Button
+            android:id="@+id/btReload"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:background="@drawable/secondary_action_button_background"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:textColor="@color/getnetButtonsColor"
+            style="@style/Theme.Getnet.ActionButton"
+            android:text="Restaurar" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

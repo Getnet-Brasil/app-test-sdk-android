@@ -1,0 +1,774 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp">
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="32dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/containerButtons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/containerPaymentAuthenticated"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Seller Id" />
+
+                <TextView
+                    android:id="@+id/edtSellerIdCheckout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="12dp"
+                    android:text="123456"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tvCustomerIdCheckout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Customer Id" />
+
+                <EditText
+                    android:id="@+id/edtCustomerIdCheckout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="customer_21081826" />
+
+                <TextView
+                    android:id="@+id/tvFirstNameCheckout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="First Name" />
+
+                <EditText
+                    android:id="@+id/edtFirstNameCheckout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="João" />
+
+                <TextView
+                    android:id="@+id/tvLastNameCheckout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Last Name" />
+
+                <EditText
+                    android:id="@+id/edtLastNameCheckout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="da Silva" />
+
+                <TextView
+                    android:id="@+id/tvNameCheckout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="First Name" />
+
+                <EditText
+                    android:id="@+id/edtNameCheckout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="João da Silva" />
+
+                <TextView
+                    android:id="@+id/tvDocumentTypeCheckout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Document Type" />
+
+                <Spinner
+                    android:id="@+id/spDocumentTypeCheckout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:entries="@array/documentType" />
+
+                <TextView
+                    android:id="@+id/tvDocumentNumberCheckout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Document Number" />
+
+                <EditText
+                    android:id="@+id/edtDocumentNumberCheckout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="82916868070" />
+
+                <TextView
+                    android:id="@+id/tvPhoneNumberCheckout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Phone Number" />
+
+                <EditText
+                    android:id="@+id/edtPhoneNumberCheckout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="5551999887766" />
+
+                <TextView
+                    android:id="@+id/tvEmailCheckout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Email" />
+
+                <EditText
+                    android:id="@+id/edtEmailCheckout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="aceitei@getnet.com.br" />
+
+                <TextView
+                    android:id="@+id/tvStreetBillingAddressCheckout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Street" />
+
+                <EditText
+                    android:id="@+id/edtStreetBillingAddressCheckout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Av. Brasil" />
+
+                <TextView
+                    android:id="@+id/tvNumberBillingAddressCheckout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Number" />
+
+                <EditText
+                    android:id="@+id/edtNumberBillingAddressCheckout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text="1000" />
+
+                <TextView
+                    android:id="@+id/tvComplementBillingAddressCheckout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Complement" />
+
+                <EditText
+                    android:id="@+id/edtComplementBillingAddressCheckout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Sala 1" />
+
+                <TextView
+                    android:id="@+id/tvDistrictBillingAddressCheckout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="District" />
+
+                <EditText
+                    android:id="@+id/edtDistrictBillingAddressCheckout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="São Geraldo" />
+
+                <TextView
+                    android:id="@+id/tvCityBillingAddressCheckout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="City" />
+
+                <EditText
+                    android:id="@+id/edtCityBillingAddressCheckout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Porto Alegre" />
+
+                <TextView
+                    android:id="@+id/tvStateBillingAddressCheckout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="State" />
+
+                <EditText
+                    android:id="@+id/edtStateBillingAddressCheckout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="RS" />
+
+                <TextView
+                    android:id="@+id/tvCountryBillingAddressCheckout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Country" />
+
+                <EditText
+                    android:id="@+id/edtCountryBillingAddressCheckout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Brasil" />
+
+                <TextView
+                    android:id="@+id/tvPostalCodeBillingAddressCheckout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Postal Code   " />
+
+                <EditText
+                    android:id="@+id/edtPostalCodeBillingAddressCheckout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text="90230060" />
+
+                <TextView
+                    android:id="@+id/tvAmountCheckout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Amount" />
+
+                <EditText
+                    android:id="@+id/edtAmountCheckout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text="100" />
+
+                <TextView
+                    android:id="@+id/tvOrderIdCheckout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Order Id" />
+
+                <EditText
+                    android:id="@+id/edtOrderIdCheckout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="54321" />
+
+                <TextView
+                    android:id="@+id/tvSoftDescriptorCheckout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Soft Descriptor" />
+
+                <EditText
+                    android:id="@+id/edtSoftDescriptorCheckout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="LOJA*TESTE*COMPRA-123" />
+
+                <TextView
+                    android:id="@+id/tvDynamicMccCheckout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Dynamic Mcc" />
+
+                <EditText
+                    android:id="@+id/edtDynamicMccCheckout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="1799" />
+
+                <TextView
+                    android:id="@+id/tvCheckoutCurrency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Currency" />
+
+                <EditText
+                    android:id="@+id/edtCheckoutCurrency"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="BRL" />
+
+                <TextView
+                    android:id="@+id/tvCheckoutIpAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Ip Address" />
+
+                <EditText
+                    android:id="@+id/edtCheckoutIpAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="127.0.0.1" />
+
+                <TextView
+                    android:id="@+id/tvCheckoutDeviceId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Device Id" />
+
+                <EditText
+                    android:id="@+id/edtCheckoutDeviceId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="hash-device-id" />
+
+                <TextView
+                    android:id="@+id/tvCheckoutCardholder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Cardholder" />
+
+                <EditText
+                    android:id="@+id/edtCheckoutCardholder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="5551999887766" />
+
+                <TextView
+                    android:id="@+id/tvShippingsCheckout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Shippings" />
+
+                <EditText
+                    android:id="@+id/edtShippingsCheckout"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:text="Lucas,Lucas Grando,aceitei@getnet.com.br,51999999999,3000,Av. Brasil,1000,Complement,São Geraldo, Porto Alegre, RS, Brasil, 90230060,lowcost,02" />
+
+                <TextView
+                    android:id="@+id/tvItemsCheckout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Items" />
+
+                <EditText
+                    android:id="@+id/edtItemsCheckout"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:text="Item,Descrição,100,2,1,sku,200" />
+
+                <TextView
+                    android:id="@+id/tvAdditionalObjectCheckout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Additional Object" />
+
+                <EditText
+                    android:id="@+id/edtAdditionalObjectCheckout"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:text="{&quot;antifraud&quot;:{&quot;device&quot;:{&quot;ip_address&quot;:&quot;127.0.0.1&quot;,&quot;device_id&quot;:&quot;hash-device-id&quot;}}}" />
+
+                <TextView
+                    android:id="@+id/tvNpaCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Npa Code"/>
+
+                <EditText
+                    android:id="@+id/edtNpaCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="01" />
+
+                <TextView
+                    android:id="@+id/tvChallengeCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Challenge Code" />
+
+                <EditText
+                    android:id="@+id/edtChallengeCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="01" />
+
+                <TextView
+                    android:id="@+id/tvInstallmentTotalCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Installment Total Count" />
+
+                <EditText
+                    android:id="@+id/edtInstallmentTotalCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="numberSigned"
+                    android:text="03" />
+
+                <TextView
+                    android:id="@+id/tvMessageCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Message Category" />
+
+                <EditText
+                    android:id="@+id/edtMessageCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="01" />
+
+                <TextView
+                    android:id="@+id/tvTransactionMode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Transaction Mode" />
+
+                <EditText
+                    android:id="@+id/edtTransactionMode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="M" />
+
+                <TextView
+                    android:id="@+id/tvAcsWindowSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Acs Window Size" />
+
+                <EditText
+                    android:id="@+id/edtAcsWindowSize"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="02"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cbCredit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:text="Crédito"
+                        tools:layout_editor_absoluteX="4dp"
+                        tools:layout_editor_absoluteY="622dp" />
+
+                    <CheckBox
+                        android:id="@+id/cbCreditAuthenticated"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:text="Crédito Autenticado"
+                        tools:layout_editor_absoluteX="4dp"
+                        tools:layout_editor_absoluteY="622dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llCreditOptions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvNumberInstallmentsCredit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Number Installments" />
+
+                    <EditText
+                        android:id="@+id/edtNumberInstallmentsCredit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cbDebit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:text="Débito"
+                        tools:layout_editor_absoluteX="4dp"
+                        tools:layout_editor_absoluteY="622dp" />
+
+                    <CheckBox
+                        android:id="@+id/cbDebitAuthenticated"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:text="Débito Autenticado"
+                        tools:layout_editor_absoluteX="4dp"
+                        tools:layout_editor_absoluteY="622dp" />
+                </LinearLayout>
+
+                <CheckBox
+                    android:id="@+id/cbDebitCaixa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:checked="true"
+                    android:text="Débito Virtual Caixa"
+                    tools:layout_editor_absoluteX="4dp"
+                    tools:layout_editor_absoluteY="622dp" />
+
+                <CheckBox
+                    android:id="@+id/cbPix"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:checked="true"
+                    android:text="Pix"
+                    tools:layout_editor_absoluteX="4dp"
+                    tools:layout_editor_absoluteY="622dp" />
+
+                <CheckBox
+                    android:id="@+id/cbQrcode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:checked="true"
+                    android:text="QRCode"
+                    tools:layout_editor_absoluteX="4dp"
+                    tools:layout_editor_absoluteY="622dp" />
+
+                <CheckBox
+                    android:id="@+id/cbBoleto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:checked="true"
+                    android:text="Boleto"
+                    tools:layout_editor_absoluteX="4dp"
+                    tools:layout_editor_absoluteY="622dp" />
+
+                <LinearLayout
+                    android:id="@+id/llBoletoOptions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvBoletoOurNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Our Number" />
+
+                    <EditText
+                        android:id="@+id/edtBoletoOurNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text="123456789012" />
+
+                    <TextView
+                        android:id="@+id/tvDocumentNumberBoleto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Document Number" />
+
+                    <EditText
+                        android:id="@+id/edtDocumentNumberBoleto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text="170500000019763" />
+
+                    <TextView
+                        android:id="@+id/tvExpirationDateBoleto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Expiration Date" />
+
+                    <EditText
+                        android:id="@+id/edtExpirationDateBoleto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text="16/11/2023" />
+
+                    <TextView
+                        android:id="@+id/tvInstructions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Instructions" />
+
+                    <EditText
+                        android:id="@+id/edtInstructions"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text="Não receber após o vencimento" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/containerButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <android.widget.Button
+            android:id="@+id/btCallCheckout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:background="@drawable/primary_action_button_background"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:textColor="@color/getnetWhite"
+            style="@style/Theme.Getnet.ActionButton"
+            android:text="Checkout" />
+
+        <android.widget.Button
+            android:id="@+id/btClearCheckout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:background="@drawable/secondary_action_button_background"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:textColor="@color/getnetButtonsColor"
+            style="@style/Theme.Getnet.ActionButton"
+            android:text="Limpar" />
+
+        <android.widget.Button
+            android:id="@+id/btReload"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:background="@drawable/secondary_action_button_background"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:textColor="@color/getnetButtonsColor"
+            style="@style/Theme.Getnet.ActionButton"
+            android:text="Restaurar" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
